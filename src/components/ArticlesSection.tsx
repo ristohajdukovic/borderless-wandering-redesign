@@ -3,7 +3,7 @@ import { articles } from "@/data/articles";
 
 const ArticlesSection = () => {
   return (
-    <section id="articles" className="py-16 md:py-24 bg-background">
+    <section id="articles" className="py-16 md:py-24 bg-card">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Latest Articles</h2>
 
@@ -12,7 +12,7 @@ const ArticlesSection = () => {
             <Link
               key={article.id}
               to={`/article/${article.slug}`}
-              className="article-card group"
+              className="group bg-background border border-border rounded-lg overflow-hidden hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="aspect-video overflow-hidden">
@@ -24,7 +24,7 @@ const ArticlesSection = () => {
               </div>
               <div className="p-5">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs text-primary font-medium uppercase">
+                  <span className="text-xs text-primary font-medium uppercase tracking-wide">
                     {article.category}
                   </span>
                   <span className="text-xs text-muted-foreground">•</span>
@@ -36,8 +36,9 @@ const ArticlesSection = () => {
                 <p className="text-sm text-muted-foreground line-clamp-2">
                   {article.excerpt}
                 </p>
-                <span className="text-primary text-sm font-medium mt-3 inline-block">
-                  Read More →
+                <span className="text-primary text-sm font-medium mt-3 inline-flex items-center gap-1">
+                  Read More 
+                  <span className="transform group-hover:translate-x-1 transition-transform">→</span>
                 </span>
               </div>
             </Link>
