@@ -4,60 +4,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* The Borderless Office - Wandering Investor Style Design System */
+/* The Borderless Office - Grounded Authority Design System */
+/* Primary Color: Cyan Blue from Logo (#2ed6fb) */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 13%;
+    /* Dark Mode by Default - Grounded Authority Theme */
+    --background: 0 0% 10%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 13%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --card-dark: 0 0% 10%;
+    --card-dark: 0 0% 8%;
     --card-dark-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 13%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    /* Orange accent - matching Wandering Investor */
-    --primary: 33 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    /* Cyan Blue Primary - from logo #2ed6fb */
+    --primary: 191 96% 58%;
+    --primary-foreground: 0 0% 8%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 13%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 33 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 191 96% 58%;
+    --accent-foreground: 0 0% 8%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 33 100% 50%;
+    --border: 0 0% 20%;
+    --input: 0 0% 18%;
+    --ring: 191 96% 58%;
 
-    --radius: 0.25rem;
+    --radius: 0.375rem;
 
-    /* Social bar */
-    --social-bar: 0 0% 20%;
-    --social-bar-foreground: 0 0% 100%;
+    /* Social bar - darker charcoal */
+    --social-bar: 0 0% 6%;
+    --social-bar-foreground: 0 0% 70%;
 
-    /* Navigation */
-    --nav-background: 0 0% 100%;
-    --nav-foreground: 0 0% 13%;
-    --nav-hover: 33 100% 50%;
+    /* Navigation - dark with glow */
+    --nav-background: 0 0% 8%;
+    --nav-foreground: 0 0% 80%;
+    --nav-hover: 191 96% 58%;
 
-    /* Dark cards for hero sections */
+    /* Hero cards */
     --hero-card: 0 0% 8%;
     --hero-card-foreground: 0 0% 100%;
 
-    /* Service cards */
-    --service-card: 0 0% 100%;
-    --service-card-hover: 0 0% 98%;
+    /* Service cards - dark with subtle border */
+    --service-card: 0 0% 14%;
+    --service-card-hover: 0 0% 16%;
 
     /* Premium Hero - Grounded Authority Theme */
     --premium-bg: 0 0% 10%;
@@ -72,7 +74,7 @@
   }
 
   .dark {
-    --background: 0 0% 8%;
+    --background: 0 0% 6%;
     --foreground: 0 0% 95%;
     --card: 0 0% 10%;
     --card-foreground: 0 0% 95%;
@@ -80,19 +82,19 @@
     --card-dark-foreground: 0 0% 100%;
     --popover: 0 0% 10%;
     --popover-foreground: 0 0% 95%;
-    --primary: 33 100% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 191 96% 58%;
+    --primary-foreground: 0 0% 8%;
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 95%;
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
-    --accent: 33 100% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 191 96% 58%;
+    --accent-foreground: 0 0% 8%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 33 100% 50%;
+    --ring: 191 96% 58%;
   }
 }
 
@@ -112,7 +114,7 @@
 
 @layer components {
   .nav-link {
-    @apply text-sm font-medium text-nav-foreground hover:text-primary transition-colors duration-200;
+    @apply text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200;
   }
 
   .nav-link-active {
@@ -128,7 +130,7 @@
   }
 
   .service-card {
-    @apply bg-service-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300 cursor-pointer;
+    @apply bg-card border border-border rounded-lg p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 cursor-pointer;
   }
 
   .service-card:hover .service-icon {
@@ -136,7 +138,7 @@
   }
 
   .article-card {
-    @apply bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300;
+    @apply bg-card rounded-lg overflow-hidden border border-border hover:border-primary/50 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300;
   }
 
   .section-title {
@@ -144,18 +146,31 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded hover:bg-primary/90 transition-all duration-200 uppercase tracking-wide;
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-md hover:bg-primary/90 transition-all duration-200 uppercase tracking-wide;
   }
 
   .btn-outline {
-    @apply border-2 border-primary text-primary font-semibold px-6 py-3 rounded hover:bg-primary hover:text-primary-foreground transition-all duration-200 uppercase tracking-wide;
+    @apply border-2 border-primary text-primary font-semibold px-6 py-3 rounded-md hover:bg-primary hover:text-primary-foreground transition-all duration-200 uppercase tracking-wide;
   }
 
   .input-field {
-    @apply w-full px-4 py-3 bg-muted/50 border-0 rounded text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:outline-none;
+    @apply w-full px-4 py-3 bg-input border border-border rounded-md text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all duration-200;
   }
 
   .input-dark {
-    @apply w-full px-4 py-3 bg-white/10 border-0 rounded text-white placeholder:text-white/60 focus:ring-2 focus:ring-primary focus:outline-none;
+    @apply w-full px-4 py-3 bg-input border border-border rounded-md text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all duration-200;
+  }
+
+  /* Premium section styles */
+  .premium-section {
+    @apply bg-gradient-to-br from-background to-card;
+  }
+
+  .premium-input {
+    @apply w-full px-4 py-3.5 bg-input border border-border rounded-md text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all duration-200;
+  }
+
+  .premium-button {
+    @apply bg-primary text-primary-foreground font-bold px-8 py-3.5 rounded-md hover:bg-primary/90 transition-all duration-200 shadow-lg shadow-primary/20;
   }
 }

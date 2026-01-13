@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,17 +16,12 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-background border-b border-border sticky top-0 z-50">
+    <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
-            <div className="flex items-center">
-              <span className="text-2xl font-heading font-bold text-foreground tracking-tight">
-                THE <span className="text-primary">BORDERLESS</span>
-              </span>
-            </div>
-            <span className="text-lg font-heading font-medium text-foreground">OFFICE</span>
+          <a href="/" className="flex items-center">
+            <img src={logo} alt="The Borderless Office" className="h-12 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
@@ -44,7 +40,7 @@ const Navbar = () => {
 
           {/* CTA and Search */}
           <div className="hidden lg:flex items-center gap-4">
-            <button className="text-foreground hover:text-primary transition-colors">
+            <button className="text-muted-foreground hover:text-primary transition-colors">
               <Search className="w-5 h-5" />
             </button>
             <Button className="btn-primary">FREE NEWSLETTER</Button>

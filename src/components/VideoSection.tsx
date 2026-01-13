@@ -17,7 +17,7 @@ const videos = [
 
 const VideoSection = () => {
   return (
-    <section id="videos" className="py-16 md:py-24 bg-muted/30">
+    <section id="videos" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Latest Videos</h2>
 
@@ -28,19 +28,19 @@ const VideoSection = () => {
               href={`https://youtube.com/watch?v=${video.id}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative aspect-video rounded-lg overflow-hidden shadow-lg"
+              className="group relative aspect-video rounded-lg overflow-hidden border border-border hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
             >
               <img
                 src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                 alt={video.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg shadow-primary/30">
                   <Play className="w-8 h-8 text-primary-foreground ml-1" fill="currentColor" />
                 </div>
               </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
                 <h3 className="text-white font-heading font-semibold text-sm">
                   {video.title}
                 </h3>
@@ -54,7 +54,7 @@ const VideoSection = () => {
             href="https://youtube.com/c/PhilipJames360"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-outline inline-block"
+            className="inline-block border-2 border-primary text-primary font-semibold px-6 py-3 rounded-md hover:bg-primary hover:text-primary-foreground transition-all duration-200 uppercase tracking-wide"
           >
             View All Videos
           </a>

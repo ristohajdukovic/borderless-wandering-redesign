@@ -79,6 +79,16 @@ export default {
           "input-bg": "hsl(var(--premium-input-bg))",
           "input-border": "hsl(var(--premium-input-border))",
         },
+        cyan: {
+          DEFAULT: "hsl(191 96% 58%)",
+          50: "hsl(191 96% 95%)",
+          100: "hsl(191 96% 88%)",
+          200: "hsl(191 96% 78%)",
+          300: "hsl(191 96% 68%)",
+          400: "hsl(191 96% 58%)",
+          500: "hsl(191 96% 48%)",
+          600: "hsl(191 96% 38%)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
