@@ -31,7 +31,7 @@ const NewsletterSection = () => {
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-              Stay Informed. Stay Inspired.
+              Join 70,000+ Expats Finding the Best Cities.
             </h2>
           </AnimatedSection>
           

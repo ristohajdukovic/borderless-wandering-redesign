@@ -15,9 +15,9 @@ const PremiumHeroSection = () => {
   };
 
   const valueBullets = [
-    'Avoid the "Vigilance Tax" of low-trust environments.',
-    "The 4 Non-Negotiables for medical reliability abroad.",
-    "Includes the printable 10-Factor City Scorecard.",
+    "End the Vigilance Tax: Identify High-Trust Communities Where You Can Lower Your Guard and Actually Relax.",
+    "Guarantee Your Standard of Care: Master the 4 Critical Benchmarks for Accessing Reliable Medical Systems Anywhere in the World.",
+    "Quantify Your Confidence: Use the 10-Factor City Scorecard to Rank Your Top Destinations Based on Data, Not Emotion.",
   ];
 
   return (
@@ -43,20 +43,18 @@ const PremiumHeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-primary font-sans text-xs md:text-sm font-semibold uppercase tracking-[0.2em]"
+              className="text-primary font-sans text-xs md:text-sm font-semibold uppercase tracking-[0.2em] leading-relaxed"
             >
-              A Practical Framework for Men 50+
+              The 50+ Blueprint: Secure Your Global Future with a Practical Roadmap Built for Long-Term Stability.
             </motion.p>
 
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight"
+              className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight"
             >
-              Stop Chasing "Vibes."
-              <br />
-              <span className="text-foreground">Start Building a Base.</span>
+              Build Your Fortress: Stop Chasing Temporary "Vibes" and Establish a Strategic Base for Lasting Peace of Mind.
             </motion.h1>
 
             <motion.p 
@@ -65,8 +63,7 @@ const PremiumHeroSection = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="font-sans text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl"
             >
-              The "No-BS" guide to vetting global cities for safety, health infrastructure, 
-              and long-term stability—before you sell the house.
+              De-Risk Your Departure: A High-Stakes Vetting System to Verify Safety and Healthcare Infrastructure Before You Commit Your Capital.
             </motion.p>
 
             <motion.div 
