@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -58,6 +58,17 @@
     /* Service cards */
     --service-card: 0 0% 100%;
     --service-card-hover: 0 0% 98%;
+
+    /* Premium Hero - Grounded Authority Theme */
+    --premium-bg: 0 0% 10%;
+    --premium-bg-gradient: 0 0% 8%;
+    --premium-gold: 43 72% 51%;
+    --premium-gold-hover: 43 72% 46%;
+    --premium-text: 0 0% 100%;
+    --premium-text-muted: 0 0% 88%;
+    --premium-text-subtle: 0 0% 35%;
+    --premium-input-bg: 0 0% 18%;
+    --premium-input-border: 0 0% 25%;
   }
 
   .dark {
