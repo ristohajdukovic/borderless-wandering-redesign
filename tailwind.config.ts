@@ -16,6 +16,8 @@ export default {
       fontFamily: {
         heading: ["Montserrat", "sans-serif"],
         body: ["Open Sans", "sans-serif"],
+        serif: ["Playfair Display", "serif"],
+        sans: ["Inter", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -65,6 +67,17 @@ export default {
         "service-card": {
           DEFAULT: "hsl(var(--service-card))",
           hover: "hsl(var(--service-card-hover))",
+        },
+        premium: {
+          bg: "hsl(var(--premium-bg))",
+          "bg-gradient": "hsl(var(--premium-bg-gradient))",
+          gold: "hsl(var(--premium-gold))",
+          "gold-hover": "hsl(var(--premium-gold-hover))",
+          text: "hsl(var(--premium-text))",
+          "text-muted": "hsl(var(--premium-text-muted))",
+          "text-subtle": "hsl(var(--premium-text-subtle))",
+          "input-bg": "hsl(var(--premium-input-bg))",
+          "input-border": "hsl(var(--premium-input-border))",
         },
       },
       borderRadius: {
