@@ -12,7 +12,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-secondary/40 border-y border-border/50 overflow-hidden relative">
+    <section className="py-12 md:py-20 lg:py-24 bg-secondary/40 border-y border-border/30 overflow-hidden relative">
       {/* Animated background glow */}
       <motion.div 
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
@@ -30,13 +30,13 @@ const NewsletterSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-              Join 70,000+ Expats Finding the Best Cities.
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+              Stay Informed. Stay Ahead.
             </h2>
           </AnimatedSection>
           
           <AnimatedSection delay={0.1}>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-foreground/70 mb-8 text-sm md:text-base">
               Get the latest on expat life, best cities, and practical tips delivered to your inbox.
             </p>
           </AnimatedSection>
@@ -63,7 +63,7 @@ const NewsletterSection = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={0.3}>
-            <p className="text-xs text-muted-foreground mt-4">
+            <p className="text-xs text-foreground/60 mt-4">
               We respect your privacy. One-click unsubscribe. No spam.
             </p>
           </AnimatedSection>
