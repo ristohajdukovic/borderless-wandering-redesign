@@ -14,10 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Montserrat", "sans-serif"],
-        body: ["Open Sans", "sans-serif"],
-        serif: ["Playfair Display", "serif"],
-        sans: ["Inter", "sans-serif"],
+        heading: ["Source Serif 4", "serif"],
+        body: ["DM Sans", "sans-serif"],
+        serif: ["Source Serif 4", "serif"],
+        sans: ["DM Sans", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -28,6 +28,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          light: "hsl(var(--primary-light))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",

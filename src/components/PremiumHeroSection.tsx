@@ -21,11 +21,11 @@ const PremiumHeroSection = () => {
   ];
 
   return (
-    <section className="relative w-full bg-gradient-to-br from-background via-card to-background overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 pointer-events-none" />
+    <section className="relative w-full bg-gradient-to-br from-background via-secondary/30 to-background overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-primary/3 pointer-events-none" />
       
       <motion.div 
-        className="absolute top-1/2 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
+        className="absolute top-1/2 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -105,14 +105,14 @@ const PremiumHeroSection = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="flex-1 px-4 py-4 bg-input border border-border rounded-md text-foreground placeholder:text-muted-foreground font-sans text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+                  className="flex-1 px-4 py-4 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground font-sans text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 shadow-sm"
                 />
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-6 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-bold text-sm md:text-base rounded-md transition-all duration-200 whitespace-nowrap disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30"
+                  className="px-6 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-sans font-bold text-sm md:text-base rounded-lg transition-all duration-200 whitespace-nowrap disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35"
                 >
                   {isSubmitting ? "Sending..." : "Send Me the Framework & Scorecard"}
                 </motion.button>
@@ -131,8 +131,8 @@ const PremiumHeroSection = () => {
           >
             <div className="relative">
               <motion.div 
-                className="absolute inset-0 bg-primary/10 blur-3xl rounded-full scale-150"
-                animate={{ scale: [1.4, 1.6, 1.4], opacity: [0.3, 0.5, 0.3] }}
+                className="absolute inset-0 bg-primary/5 blur-3xl rounded-full scale-150"
+                animate={{ scale: [1.4, 1.6, 1.4], opacity: [0.2, 0.35, 0.2] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               />
               <motion.img

@@ -12,13 +12,13 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-card to-background border-y border-border overflow-hidden relative">
+    <section className="py-16 md:py-24 bg-secondary/40 border-y border-border/50 overflow-hidden relative">
       {/* Animated background glow */}
       <motion.div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.3, 1],
-          opacity: [0.2, 0.4, 0.2],
+          opacity: [0.3, 0.5, 0.3],
         }}
         transition={{
           duration: 5,
@@ -48,12 +48,12 @@ const NewsletterSection = () => {
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 px-4 py-3 bg-input border border-border rounded-md text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all duration-200"
+                className="flex-1 px-4 py-3 bg-card border border-border/50 rounded-lg text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none transition-all duration-200 shadow-sm"
                 required
               />
               <motion.button 
                 type="submit" 
-                className="bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-md hover:bg-primary/90 transition-all duration-200 uppercase tracking-wide whitespace-nowrap shadow-lg shadow-primary/20"
+                className="bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-lg hover:bg-primary/90 transition-all duration-200 uppercase tracking-wide whitespace-nowrap shadow-lg shadow-primary/25"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

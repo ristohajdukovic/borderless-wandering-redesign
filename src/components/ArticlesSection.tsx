@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const ArticlesSection = () => {
   return (
-    <section id="articles" className="py-16 md:py-24 bg-card">
+    <section id="articles" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <h2 className="section-title">Latest Articles</h2>
@@ -30,7 +30,7 @@ const ArticlesSection = () => {
             >
               <Link
                 to={`/article/${article.slug}`}
-                className="group block h-full bg-background border border-border rounded-lg overflow-hidden hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300"
+                className="group block h-full bg-card border border-border/50 rounded-2xl overflow-hidden hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 shadow-sm"
               >
                 <div className="aspect-video overflow-hidden">
                   <motion.img
