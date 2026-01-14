@@ -1,6 +1,7 @@
 import SocialBar from "@/components/SocialBar";
 import Navbar from "@/components/Navbar";
 import PremiumHeroSection from "@/components/PremiumHeroSection";
+import TrustBar from "@/components/TrustBar";
 import ServicesSection from "@/components/ServicesSection";
 import ArticlesSection from "@/components/ArticlesSection";
 import VideoSection from "@/components/VideoSection";
@@ -14,6 +15,7 @@ const Index = () => {
       <Navbar />
       <main>
         <PremiumHeroSection />
+        <TrustBar />
         <ServicesSection />
         <ArticlesSection />
         <VideoSection />
