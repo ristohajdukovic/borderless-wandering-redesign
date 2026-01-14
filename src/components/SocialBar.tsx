@@ -2,7 +2,7 @@ import { Instagram, Twitter, Linkedin, Facebook, Youtube } from "lucide-react";
 
 const SocialBar = () => {
   return (
-    <div className="bg-card-dark py-2">
+    <div className="bg-secondary py-2 border-b border-border/50">
       <div className="container mx-auto px-4 flex justify-end items-center gap-4">
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
           <Instagram className="w-4 h-4" />

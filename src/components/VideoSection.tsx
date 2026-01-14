@@ -32,7 +32,7 @@ const VideoSection = () => {
               href={`https://youtube.com/watch?v=${video.id}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative aspect-video rounded-lg overflow-hidden border border-border hover:border-primary/50 transition-colors"
+              className="group relative aspect-video rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-colors shadow-sm"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -77,7 +77,7 @@ const VideoSection = () => {
               href="https://youtube.com/c/PhilipJames360"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block border-2 border-primary text-primary font-semibold px-6 py-3 rounded-md hover:bg-primary hover:text-primary-foreground transition-all duration-200 uppercase tracking-wide"
+              className="inline-block border-2 border-primary text-primary font-semibold px-6 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-200 uppercase tracking-wide shadow-sm"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >

@@ -3,7 +3,7 @@ import logo from "@/assets/logo.svg";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-card-dark border-t border-border py-16">
+    <footer id="contact" className="bg-secondary border-t border-border py-16">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-10">
           {/* Brand */}

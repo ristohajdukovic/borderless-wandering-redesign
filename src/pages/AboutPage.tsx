@@ -57,9 +57,9 @@ const AboutPage = () => {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="relative py-20 md:py-32 bg-gradient-to-br from-background via-card to-background overflow-hidden">
+        <section className="relative py-20 md:py-32 bg-gradient-to-br from-background via-secondary/30 to-background overflow-hidden">
           <motion.div 
-            className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"
+            className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.2, 0.4, 0.2],
@@ -99,7 +99,7 @@ const AboutPage = () => {
         </section>
 
         {/* The Story Section */}
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-16 md:py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <AnimatedSection direction="left">
@@ -128,7 +128,7 @@ const AboutPage = () => {
               </AnimatedSection>
               
               <AnimatedSection direction="right" delay={0.2}>
-                <div className="bg-background border border-border rounded-lg p-8">
+                <div className="bg-card border border-border/50 rounded-2xl p-8 shadow-sm">
                   <h3 className="font-heading font-bold text-xl text-foreground mb-6">
                     The Borderless Philosophy
                   </h3>
@@ -142,7 +142,7 @@ const AboutPage = () => {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.15 }}
                       >
-                        <div className="flex-shrink-0 p-2 bg-primary/10 rounded-lg h-fit">
+                        <div className="flex-shrink-0 p-2 bg-primary-light rounded-xl h-fit">
                           <value.icon className="w-5 h-5 text-primary" />
                         </div>
                         <div>
@@ -207,7 +207,7 @@ const AboutPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-16 md:py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
             <AnimatedSection>
               <div className="max-w-2xl mx-auto text-center">
@@ -219,7 +219,7 @@ const AboutPage = () => {
                 </p>
                 <motion.a
                   href="/"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-md transition-colors"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-lg transition-colors shadow-lg shadow-primary/25"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
