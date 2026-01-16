@@ -47,16 +47,18 @@ const ShareButtons = ({ title, url }: ShareButtonsProps) => {
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+          className="w-11 h-11 rounded-[6px] bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
           title={`Share on ${link.name}`}
+          aria-label={`Share on ${link.name}`}
         >
           <link.icon className="w-4 h-4" />
         </a>
       ))}
       <button
         onClick={copyLink}
-        className="w-9 h-9 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+        className="w-11 h-11 rounded-[6px] bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
         title="Copy link"
+        aria-label="Copy link"
       >
         <Link2 className="w-4 h-4" />
       </button>

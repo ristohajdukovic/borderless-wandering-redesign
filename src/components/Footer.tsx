@@ -1,64 +1,120 @@
-import { Instagram, Twitter, Linkedin, Facebook, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Youtube } from "lucide-react";
 import logo from "@/assets/logo.svg";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-secondary border-t border-border py-16">
+    <footer id="contact" className="bg-primary border-t border-primary-foreground/20 py-16 text-primary-foreground">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-10">
-          {/* Brand */}
           <div className="md:col-span-2">
             <img src={logo} alt="The Borderless Office" className="h-10 w-auto mb-4" />
-            <p className="text-muted-foreground mb-6 max-w-md">
-              Expat Life: A Guide to the Best Cities to Live Abroad. Real experiences, 
-              practical advice, and honest insights for those seeking a life beyond borders.
+            <p className="text-primary-foreground/80 mb-6 max-w-md">
+              Expat life after 50 with Thailand city ratings, ranked city comparisons, and on-the-ground relocation
+              field notes for men planning life abroad.
             </p>
-            <div className="flex gap-4">
-              <a href="https://instagram.com" className="text-muted-foreground hover:text-primary transition-colors">
-                <Instagram className="w-5 h-5" />
+            <div className="flex items-center gap-3">
+              <a
+                href="https://youtube.com/c/PhilipJames360"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-[6px] border border-primary-foreground/40 text-primary-foreground/80 hover:text-primary-foreground hover:border-primary-foreground transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-foreground focus-visible:outline-offset-2"
+                aria-label="YouTube"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Youtube className="h-5 w-5" />
               </a>
-              <a href="https://twitter.com" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a
+                href="https://instagram.com"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-[6px] border border-primary-foreground/40 text-primary-foreground/80 hover:text-primary-foreground hover:border-primary-foreground transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-foreground focus-visible:outline-offset-2"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com" className="text-muted-foreground hover:text-primary transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <a
+                href="https://facebook.com"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-[6px] border border-primary-foreground/40 text-primary-foreground/80 hover:text-primary-foreground hover:border-primary-foreground transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-foreground focus-visible:outline-offset-2"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://facebook.com" className="text-muted-foreground hover:text-primary transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="https://youtube.com" className="text-muted-foreground hover:text-primary transition-colors">
-                <Youtube className="w-5 h-5" />
+              <a
+                href="https://linkedin.com"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-[6px] border border-primary-foreground/40 text-primary-foreground/80 hover:text-primary-foreground hover:border-primary-foreground transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-foreground focus-visible:outline-offset-2"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="h-5 w-5" />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-semibold text-lg text-foreground mb-4">Quick Links</h4>
+            <h4 className="font-heading font-semibold text-lg text-primary-foreground mb-4">Explore Expat Guides</h4>
             <ul className="space-y-2">
-              <li><a href="#articles" className="text-muted-foreground hover:text-primary transition-colors">Articles</a></li>
-              <li><a href="#videos" className="text-muted-foreground hover:text-primary transition-colors">Videos</a></li>
-              <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a></li>
-              <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
+              <li>
+                <a
+                  href="/videos"
+                  className="text-primary-foreground/80 hover:text-primary-foreground hover:underline underline-offset-4 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-foreground focus-visible:outline-offset-2 rounded-[6px]"
+                >
+                  Thailand City Ratings (Videos)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/videos"
+                  className="text-primary-foreground/80 hover:text-primary-foreground hover:underline underline-offset-4 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-foreground focus-visible:outline-offset-2 rounded-[6px]"
+                >
+                  30 in 30 Video Series
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/articles"
+                  className="text-primary-foreground/80 hover:text-primary-foreground hover:underline underline-offset-4 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-foreground focus-visible:outline-offset-2 rounded-[6px]"
+                >
+                  Ranked Cities (Articles)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  className="text-primary-foreground/80 hover:text-primary-foreground hover:underline underline-offset-4 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-foreground focus-visible:outline-offset-2 rounded-[6px]"
+                >
+                  About Philip James
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="text-primary-foreground/80 hover:text-primary-foreground hover:underline underline-offset-4 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-foreground focus-visible:outline-offset-2 rounded-[6px]"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="font-heading font-semibold text-lg text-foreground mb-4">Contact</h4>
-            <p className="text-muted-foreground mb-2">
-              <a href="mailto:philip@theborderlessoffice.com" className="hover:text-primary transition-colors">
+            <h4 className="font-heading font-semibold text-lg text-primary-foreground mb-4">Contact</h4>
+            <p className="text-primary-foreground/80 mb-2 flex items-center gap-2">
+              <Mail className="w-4 h-4 text-primary-foreground" />
+              <a
+                href="mailto:philip@theborderlessoffice.com"
+                className="hover:text-primary-foreground hover:underline underline-offset-4 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-foreground focus-visible:outline-offset-2 rounded-[6px]"
+              >
                 philip@theborderlessoffice.com
               </a>
             </p>
-            <p className="text-muted-foreground text-sm mt-4">
-              Currently based in: Thailand 🇹🇭
-            </p>
+            <p className="text-primary-foreground/70 text-sm mt-4">Currently based in: Thailand</p>
           </div>
         </div>
 
-        <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground text-sm">
-          <p>© {new Date().getFullYear()} The Borderless Office. All rights reserved.</p>
+        <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center text-primary-foreground/70 text-sm">
+          <p>Copyright {new Date().getFullYear()} The Borderless Office. All rights reserved.</p>
         </div>
       </div>
     </footer>

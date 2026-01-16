@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MessageSquare, Users, Send, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
-import SocialBar from "@/components/SocialBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/ui/AnimatedSection";
@@ -64,13 +63,12 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <SocialBar />
       <Navbar />
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
-        <section className="relative py-20 md:py-28 bg-gradient-to-br from-background via-secondary/30 to-background overflow-hidden">
+        <section className="relative py-[60px] md:py-28 bg-gradient-to-br from-background via-secondary/30 to-background overflow-hidden">
           <motion.div 
-            className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl"
+            className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-primary/5 rounded-[16px] blur-3xl"
             animate={{
               scale: [1, 1.15, 1],
               opacity: [0.2, 0.35, 0.2],
@@ -113,14 +111,14 @@ const ContactPage = () => {
               {contactReasons.map((reason, index) => (
                 <motion.div
                   key={reason.title}
-                  className="p-6 bg-card border border-border/50 rounded-2xl shadow-sm"
+                  className="p-6 bg-card border border-border/50 rounded-[12px] shadow-sm"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ y: -4, boxShadow: "0 20px 40px -15px hsl(var(--primary) / 0.15)" }}
                 >
-                  <div className="p-3 bg-primary-light rounded-xl w-fit mb-4">
+                  <div className="p-3 bg-primary-light rounded-[12px] w-fit mb-4">
                     <reason.icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-heading font-semibold text-foreground text-lg mb-2">
@@ -153,7 +151,7 @@ const ContactPage = () => {
               <AnimatedSection delay={0.1}>
                 <motion.form 
                   onSubmit={handleSubmit}
-                  className="space-y-6 bg-card border border-border/50 rounded-2xl p-8 shadow-sm"
+                  className="space-y-6 bg-card border border-border/50 rounded-[12px] p-8 shadow-sm"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
@@ -169,7 +167,7 @@ const ContactPage = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         required
-                        className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-[6px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                         placeholder="John Smith"
                       />
                     </div>
@@ -183,7 +181,7 @@ const ContactPage = () => {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         required
-                        className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 bg-background border border-border rounded-[6px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -198,7 +196,7 @@ const ContactPage = () => {
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none"
+                      className="w-full px-4 py-3 bg-background border border-border rounded-[6px] text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none"
                     >
                       <option value="" disabled>Select a subject...</option>
                       {subjects.map((subject) => (
@@ -217,7 +215,7 @@ const ContactPage = () => {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                      className="w-full px-4 py-3 bg-background border border-border rounded-[6px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
                       placeholder="Tell me about your inquiry..."
                     />
                   </div>
@@ -227,7 +225,7 @@ const ContactPage = () => {
                     disabled={isSubmitting || isSubmitted}
                     whileHover={{ scale: isSubmitting || isSubmitted ? 1 : 1.02 }}
                     whileTap={{ scale: isSubmitting || isSubmitted ? 1 : 0.98 }}
-                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-lg transition-all disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-primary/25"
+                    className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-[6px] transition-all disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-primary/25"
                   >
                     {isSubmitted ? (
                       <>
@@ -237,7 +235,7 @@ const ContactPage = () => {
                     ) : isSubmitting ? (
                       <>
                         <motion.div
-                          className="w-5 h-5 border-2 border-primary-foreground border-t-transparent rounded-full"
+                          className="w-5 h-5 border-2 border-primary-foreground border-t-transparent rounded-[6px]"
                           animate={{ rotate: 360 }}
                           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
                         />

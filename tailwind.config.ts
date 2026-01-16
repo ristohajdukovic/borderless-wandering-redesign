@@ -14,10 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Source Serif 4", "serif"],
-        body: ["DM Sans", "sans-serif"],
-        serif: ["Source Serif 4", "serif"],
-        sans: ["DM Sans", "sans-serif"],
+        heading: ["Fraunces", "serif"],
+        body: ["Manrope", "sans-serif"],
+        serif: ["Fraunces", "serif"],
+        sans: ["Manrope", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

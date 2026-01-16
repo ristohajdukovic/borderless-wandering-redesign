@@ -1,10 +1,10 @@
-import SocialBar from "@/components/SocialBar";
 import Navbar from "@/components/Navbar";
 import PremiumHeroSection from "@/components/PremiumHeroSection";
-import TrustBar from "@/components/TrustBar";
-import ServicesSection from "@/components/ServicesSection";
+import MetricStrip from "@/components/MetricStrip";
+import StartHereSection from "@/components/StartHereSection";
 import ArticlesSection from "@/components/ArticlesSection";
-import VideoSection from "@/components/VideoSection";
+import VideoGrid from "@/components/VideoGrid";
+import AboutSection from "@/components/AboutSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import AboutMeSection from "@/components/AboutMeSection";
 import Footer from "@/components/Footer";
@@ -12,14 +12,14 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SocialBar />
       <Navbar />
-      <main>
+      <main id="main-content">
         <PremiumHeroSection />
-        <TrustBar />
-        <ServicesSection />
+        <MetricStrip />
+        <StartHereSection />
         <ArticlesSection />
-        <VideoSection />
+        <VideoGrid />
+        <AboutSection />
         <NewsletterSection />
         <AboutMeSection />
       </main>

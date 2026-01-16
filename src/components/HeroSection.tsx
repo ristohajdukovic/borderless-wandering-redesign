@@ -28,7 +28,7 @@ const HeroSection = () => {
           <div className="lg:w-2/3 w-full">
             <div className="hero-card max-w-2xl animate-slide-in-right">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
-                <span className="text-primary">EXPAT LIFE:</span> YOUR GUIDE TO LIVING ABROAD
+                <span className="text-primary-light">EXPAT LIFE:</span> YOUR GUIDE TO LIVING ABROAD
               </h1>
               
               <form onSubmit={handleSubmit} className="space-y-4 mb-6">
@@ -53,11 +53,11 @@ const HeroSection = () => {
                 </button>
               </form>
 
-              <p className="text-white/80 text-sm leading-relaxed">
+              <p className="text-hero-card-foreground/80 text-sm leading-relaxed">
                 Gain on-the-ground insights to maximize your expat experience. This guide isn't just a list of tips; 
                 learn how to make informed decisions, avoid common traps, and truly find your ideal city abroad.
               </p>
-              <p className="text-white/60 text-sm mt-4">
+              <p className="text-hero-card-foreground/60 text-sm mt-4">
                 Sign-up and Grab Your Free Guide.
               </p>
             </div>
