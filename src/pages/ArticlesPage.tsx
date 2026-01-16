@@ -154,10 +154,10 @@ const ArticlesPage = () => {
                         </p>
                         <div className="mt-auto pt-5 flex items-center gap-2 text-xs uppercase tracking-wide text-muted-foreground">
                           <span>{article.readTime}</span>
-                          <span className="text-muted-foreground/60">•</span>
+                          <span className="text-muted-foreground/60">|</span>
                           <span>{article.date}</span>
                           <span className="ml-auto text-primary/70" aria-hidden="true">
-                            →
+                            -&gt;
                           </span>
                         </div>
                       </div>
