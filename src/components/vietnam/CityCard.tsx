@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Calendar, ArrowRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { ArrowUpRight } from "lucide-react";
 import { CityDay } from "@/data/vietnamCities";
 
 interface CityCardProps {
@@ -9,97 +8,73 @@ interface CityCardProps {
 }
 
 const CityCard = ({ city, index }: CityCardProps) => {
-  const regionColors = {
-    North: "bg-cyan-500/10 text-cyan-600 border-cyan-500/20",
-    Central: "bg-amber-500/10 text-amber-600 border-amber-500/20",
-    South: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20"
+  const regionLabel = {
+    North: "N",
+    Central: "C", 
+    South: "S"
   };
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.05 }}
-      className="group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3, delay: index * 0.03 }}
+      className="group relative border-b border-border pb-6 md:border md:border-border md:p-0 md:pb-0"
     >
-      {/* Day Badge */}
-      <div className="absolute top-4 left-4 z-10">
-        <div className="bg-primary text-primary-foreground font-heading font-bold text-sm px-3 py-1.5 rounded-full shadow-lg">
-          Day {city.day}
-        </div>
-      </div>
-
-      {/* Region Badge */}
-      <div className="absolute top-4 right-4 z-10">
-        <Badge variant="outline" className={`${regionColors[city.region]} backdrop-blur-sm`}>
-          {city.region}
-        </Badge>
-      </div>
-
-      {/* Image */}
-      <div className="relative h-48 sm:h-56 overflow-hidden">
-        <motion.img
-          src={city.image}
-          alt={city.city}
-          className="w-full h-full object-cover"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.4 }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
-      </div>
-
-      {/* Content */}
-      <div className="p-5 sm:p-6">
-        {/* City Name & Headline */}
-        <div className="mb-3">
-          <div className="flex items-center gap-2 text-muted-foreground text-sm mb-1">
-            <MapPin className="w-4 h-4" />
-            <span>{city.city}, Vietnam</span>
+      {/* Mobile: Horizontal Layout / Desktop: Vertical Card */}
+      <div className="flex gap-4 md:block">
+        {/* Image */}
+        <div className="relative w-24 h-24 md:w-full md:h-48 flex-shrink-0 overflow-hidden md:border-b md:border-border">
+          <img
+            src={city.image}
+            alt={city.city}
+            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+          />
+          {/* Day Number Overlay */}
+          <div className="absolute top-2 left-2 md:top-3 md:left-3">
+            <span className="font-mono text-[10px] md:text-xs bg-background/90 backdrop-blur-sm px-1.5 py-0.5 md:px-2 md:py-1 border border-border">
+              D{String(city.day).padStart(2, '0')}
+            </span>
           </div>
-          <h3 className="font-heading text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+        </div>
+
+        {/* Content */}
+        <div className="flex-1 min-w-0 md:p-4">
+          {/* City & Region */}
+          <div className="flex items-start justify-between gap-2 mb-1 md:mb-2">
+            <span className="text-[10px] md:text-xs tracking-widest uppercase text-muted-foreground">
+              {city.city} — {regionLabel[city.region]}
+            </span>
+            <ArrowUpRight className="w-3 h-3 md:w-4 md:h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+          </div>
+
+          {/* Headline */}
+          <h3 className="font-heading text-sm md:text-base font-semibold text-foreground leading-snug mb-2 line-clamp-2 group-hover:text-primary transition-colors">
             {city.headline}
           </h3>
+
+          {/* Excerpt - Hidden on mobile for cleaner look */}
+          <p className="hidden md:block text-sm text-muted-foreground leading-relaxed mb-3 line-clamp-2">
+            {city.excerpt}
+          </p>
+
+          {/* Tags - Minimal */}
+          <div className="flex flex-wrap gap-1.5 md:gap-2">
+            {city.tags.slice(0, 2).map((tag) => (
+              <span
+                key={tag}
+                className="text-[10px] md:text-xs text-muted-foreground border-b border-dotted border-muted-foreground/40"
+              >
+                {tag}
+              </span>
+            ))}
+            {city.tags.length > 2 && (
+              <span className="text-[10px] md:text-xs text-muted-foreground/60">
+                +{city.tags.length - 2}
+              </span>
+            )}
+          </div>
         </div>
-
-        {/* Excerpt */}
-        <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-2">
-          {city.excerpt}
-        </p>
-
-        {/* Highlights */}
-        <div className="flex flex-wrap gap-1.5 mb-4">
-          {city.highlights.map((highlight) => (
-            <span
-              key={highlight}
-              className="text-xs bg-muted/50 text-muted-foreground px-2 py-1 rounded-md"
-            >
-              {highlight}
-            </span>
-          ))}
-        </div>
-
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {city.tags.slice(0, 3).map((tag) => (
-            <Badge key={tag} variant="secondary" className="text-xs">
-              {tag}
-            </Badge>
-          ))}
-          {city.tags.length > 3 && (
-            <Badge variant="outline" className="text-xs">
-              +{city.tags.length - 3}
-            </Badge>
-          )}
-        </div>
-
-        {/* Read More Link */}
-        <motion.button
-          className="flex items-center gap-2 text-primary font-medium text-sm group/btn"
-          whileHover={{ x: 4 }}
-        >
-          <span>Read Day {city.day} Story</span>
-          <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-        </motion.button>
       </div>
     </motion.article>
   );
