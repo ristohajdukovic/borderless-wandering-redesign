@@ -13,6 +13,7 @@ const Navbar = () => {
     { name: "HOME", href: "/" },
     { name: "ARTICLES", href: "/#articles" },
     { name: "VIDEOS", href: "/#videos" },
+    { name: "VIETNAM 30", href: "/vietnam-30" },
     { name: "SERVICES", href: "/#services", hasDropdown: true },
     { name: "ABOUT", href: "/about" },
     { name: "CONTACT", href: "/contact" },
