@@ -20,6 +20,9 @@ export default {
         sans: ["Manrope", "sans-serif"],
       },
       colors: {
+        surface: "hsl(var(--surface))",
+        mutedText: "hsl(var(--muted-text))",
+        borderMuted: "hsl(var(--border-muted))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

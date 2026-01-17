@@ -68,7 +68,7 @@ const VideoGrid = () => {
                     transition={{ duration: 0.5, ease: "easeOut" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <span className="absolute top-4 left-4 rounded-[6px] bg-accent/90 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-accent-foreground">
+                  <span className="absolute top-4 left-4 rounded-[6px] bg-secondary/85 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-secondary-foreground">
                     Featured
                   </span>
                   {featured.duration ? (
@@ -84,7 +84,7 @@ const VideoGrid = () => {
                 </div>
 
                 <div className="p-5 md:p-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-2">Director's cut</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary mb-2">Director's cut</p>
                   <h3 className="font-heading font-semibold text-foreground text-lg md:text-xl leading-snug">
                     {featured.title}
                   </h3>
@@ -121,7 +121,7 @@ const VideoGrid = () => {
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.5, ease: "easeOut" }}
                     />
-                    <span className="absolute top-3 left-3 rounded-[6px] bg-accent/85 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-accent-foreground">
+                    <span className="absolute top-3 left-3 rounded-[6px] bg-secondary/80 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-secondary-foreground">
                       {video.category}
                     </span>
                     {video.duration ? (

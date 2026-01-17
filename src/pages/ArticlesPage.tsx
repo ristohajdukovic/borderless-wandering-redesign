@@ -37,7 +37,7 @@ const ArticlesPage = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <main id="main-content">
-        <section className="relative py-[60px] md:py-28 bg-gradient-to-br from-background via-secondary/40 to-background overflow-hidden">
+        <section className="relative py-[60px] md:py-28 bg-gradient-to-br from-surface via-surface/80 to-surface overflow-hidden">
           <div className="absolute top-10 right-10 w-64 h-64 bg-primary/5 rounded-[16px] blur-3xl" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">
@@ -87,9 +87,9 @@ const ArticlesPage = () => {
                         type="button"
                         className={`px-4 py-2 rounded-[6px] text-xs font-semibold uppercase tracking-wide border transition-colors ${
                           isActive
-                            ? "bg-accent text-accent-foreground border-accent shadow-sm"
-                            : "border-border text-muted-foreground hover:text-accent hover:border-accent hover:bg-accent/10"
-                        } focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
+                            ? "bg-secondary text-secondary-foreground border-secondary shadow-sm"
+                            : "border-border text-muted-foreground hover:text-secondary hover:border-secondary hover:bg-secondary/10"
+                        } focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
                         onClick={() => setSortOrder(sort)}
                       >
                         {sort}

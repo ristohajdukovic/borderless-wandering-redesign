@@ -6,7 +6,7 @@ import { videos } from "@/data/videos";
 
 const VideoSection = () => {
   return (
-    <section id="videos" className="py-12 md:py-20 lg:py-24 bg-secondary/30">
+    <section id="videos" className="py-12 md:py-20 lg:py-24 bg-surface">
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <div className="text-center mb-10 md:mb-14">

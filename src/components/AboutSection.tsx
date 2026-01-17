@@ -19,7 +19,7 @@ const AboutSection = () => {
                       <User className="h-10 w-10" />
                     </div>
                     <div className="text-lg font-semibold text-primary">Philip James</div>
-                    <p className="text-xs uppercase tracking-[0.2em] text-primary/70">
+                    <p className="text-xs uppercase tracking-[0.2em] text-secondary/80">
                       Portrait coming soon
                     </p>
                   </div>

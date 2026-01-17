@@ -47,9 +47,9 @@ const variantClasses: Record<ArrowButtonVariant, { base: string; arrow: string; 
     ring: "focus-visible:ring-primary",
   },
   secondary: {
-    base: "bg-primary-foreground text-primary border border-primary/20 hover:bg-primary-foreground/90",
-    arrow: "bg-primary text-primary-foreground",
-    ring: "focus-visible:ring-primary-foreground",
+    base: "bg-surface text-secondary border border-secondary/40 hover:bg-secondary/10",
+    arrow: "bg-secondary text-secondary-foreground",
+    ring: "focus-visible:ring-secondary",
   },
 };
 

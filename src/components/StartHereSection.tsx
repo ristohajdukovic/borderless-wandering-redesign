@@ -25,7 +25,7 @@ const StartHereSection = () => {
             />
             <div className="relative flex h-full flex-col justify-between">
               <div>
-                <span className="inline-flex items-center gap-2 rounded-[6px] bg-accent/25 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent-foreground">
+                <span className="inline-flex items-center gap-2 rounded-[6px] bg-secondary/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-secondary-foreground">
                   <Play className="h-4 w-4" />
                   Primary path
                 </span>
@@ -48,7 +48,7 @@ const StartHereSection = () => {
 
           <div className="flex flex-col gap-6">
             <div className="group rounded-[12px] border border-border/60 bg-primary/5 p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/40">
-              <span className="inline-flex items-center gap-2 rounded-[6px] bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              <span className="inline-flex items-center gap-2 rounded-[6px] bg-secondary/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
                 <BookOpen className="h-4 w-4" />
                 Read
               </span>
@@ -68,7 +68,7 @@ const StartHereSection = () => {
             </div>
 
             <div className="group rounded-[12px] border border-border/60 bg-primary/5 p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/40">
-              <span className="inline-flex items-center gap-2 rounded-[6px] bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              <span className="inline-flex items-center gap-2 rounded-[6px] bg-secondary/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
                 <Layers className="h-4 w-4" />
                 Series
               </span>

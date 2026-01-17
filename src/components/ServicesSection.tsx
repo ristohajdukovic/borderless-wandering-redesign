@@ -52,7 +52,7 @@ const ServicesSection = () => {
   const essentialServices = services.filter((service) => essentials.includes(service.id));
 
   return (
-    <section id="services" className="py-[60px] md:py-28 bg-[#f7f2ea]">
+    <section id="services" className="py-[60px] md:py-28 bg-surface">
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <h2 className="text-center text-2xl md:text-3xl font-heading font-semibold text-foreground mb-10">

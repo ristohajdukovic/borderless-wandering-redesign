@@ -54,7 +54,7 @@ const AboutPage = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <main id="main-content">
-        <section className="relative py-[60px] md:py-32 bg-gradient-to-br from-background via-secondary/30 to-background overflow-hidden">
+        <section className="relative py-[60px] md:py-32 bg-gradient-to-br from-surface via-surface/80 to-surface overflow-hidden">
           <motion.div
             className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/5 rounded-[16px] blur-3xl"
             animate={{
@@ -94,7 +94,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-secondary/30">
+        <section className="py-16 md:py-24 bg-surface">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <AnimatedSection direction="left">
@@ -186,7 +186,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-secondary/30">
+        <section className="py-16 md:py-24 bg-surface">
           <div className="container mx-auto px-4">
             <AnimatedSection>
               <div className="max-w-2xl mx-auto text-center">

@@ -26,7 +26,7 @@ const ServicesPage = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <main id="main-content">
-        <section className="relative py-[60px] md:py-28 bg-gradient-to-br from-background via-secondary/40 to-background overflow-hidden">
+        <section className="relative py-[60px] md:py-28 bg-gradient-to-br from-surface via-surface/80 to-surface overflow-hidden">
           <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-primary/5 rounded-[16px] blur-3xl" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl">

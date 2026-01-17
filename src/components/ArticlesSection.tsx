@@ -79,9 +79,9 @@ const ArticlesSection = () => {
                   type="button"
                   className={`rounded-[6px] border px-4 py-2 text-xs font-semibold uppercase tracking-wide transition-colors ${
                     isActive
-                      ? "bg-accent text-accent-foreground border-accent shadow-sm"
-                      : "border-border text-muted-foreground hover:text-accent hover:border-accent hover:bg-accent/10"
-                  } focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
+                      ? "bg-secondary text-secondary-foreground border-secondary shadow-sm"
+                      : "border-border text-muted-foreground hover:text-secondary hover:border-secondary hover:bg-secondary/10"
+                  } focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-background`}
                   onClick={() => setSortOrder(sort)}
                 >
                   {sort}
@@ -137,14 +137,14 @@ const ArticlesSection = () => {
                     <div className="flex flex-wrap items-center gap-2 mb-4">
                       <Badge
                         variant="secondary"
-                        className="text-[10px] tracking-[0.2em] uppercase bg-accent/10 text-accent border border-accent/20"
+                        className="text-[10px] tracking-[0.2em] uppercase bg-secondary/15 text-secondary border border-secondary/30"
                       >
                         {article.category}
                       </Badge>
                       {article.cityTag ? (
                         <Badge
                           variant="outline"
-                          className="text-[10px] uppercase tracking-wide text-accent border-accent/30"
+                          className="text-[10px] uppercase tracking-wide text-secondary border-secondary/30"
                         >
                           {article.cityTag}
                         </Badge>

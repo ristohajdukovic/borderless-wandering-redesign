@@ -66,7 +66,7 @@ const ContactPage = () => {
       <Navbar />
       <main id="main-content">
         {/* Hero Section */}
-        <section className="relative py-[60px] md:py-28 bg-gradient-to-br from-background via-secondary/30 to-background overflow-hidden">
+        <section className="relative py-[60px] md:py-28 bg-gradient-to-br from-surface via-surface/80 to-surface overflow-hidden">
           <motion.div 
             className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-primary/5 rounded-[16px] blur-3xl"
             animate={{
@@ -105,7 +105,7 @@ const ContactPage = () => {
         </section>
 
         {/* Contact Reasons */}
-        <section className="py-16 bg-secondary/30">
+        <section className="py-16 bg-surface">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-6">
               {contactReasons.map((reason, index) => (
@@ -167,7 +167,7 @@ const ContactPage = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         required
-                        className="w-full px-4 py-3 bg-background border border-border rounded-[6px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 bg-card border border-border rounded-[6px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                         placeholder="John Smith"
                       />
                     </div>
@@ -181,7 +181,7 @@ const ContactPage = () => {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         required
-                        className="w-full px-4 py-3 bg-background border border-border rounded-[6px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 bg-card border border-border rounded-[6px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -196,7 +196,7 @@ const ContactPage = () => {
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-[6px] text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none"
+                      className="w-full px-4 py-3 bg-card border border-border rounded-[6px] text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none"
                     >
                       <option value="" disabled>Select a subject...</option>
                       {subjects.map((subject) => (
@@ -215,7 +215,7 @@ const ContactPage = () => {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-[6px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                      className="w-full px-4 py-3 bg-card border border-border rounded-[6px] text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
                       placeholder="Tell me about your inquiry..."
                     />
                   </div>
