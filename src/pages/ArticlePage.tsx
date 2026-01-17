@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ShareButtons from "@/components/ShareButtons";
 import ArticleSidebar from "@/components/ArticleSidebar";
+import ArrowButton from "@/components/ui/ArrowButton";
 import { getArticleBySlug, getRelatedArticles } from "@/data/articles";
 
 const ArticlePage = () => {
@@ -19,9 +20,7 @@ const ArticlePage = () => {
         <main id="main-content" className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-3xl font-heading font-bold mb-4">Article Not Found</h1>
           <p className="text-muted-foreground mb-8">The article you are looking for does not exist.</p>
-          <Link to="/articles" className="btn-primary inline-block">
-            Back to Articles
-          </Link>
+          <ArrowButton label="Back to Articles" to="/articles" variant="primary" size="md" />
         </main>
         <Footer />
       </div>

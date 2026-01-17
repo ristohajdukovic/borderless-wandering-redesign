@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ArrowButton from "@/components/ui/ArrowButton";
 import heroImage from "@/assets/hero-ebook.png";
 
 const HeroSection = () => {
@@ -48,9 +49,13 @@ const HeroSection = () => {
                   className="input-dark"
                   required
                 />
-                <button type="submit" className="btn-primary w-full text-center">
-                  SIGN ME UP! + GET FREE GUIDE
-                </button>
+                <ArrowButton
+                  label="SIGN ME UP! + GET FREE GUIDE"
+                  type="submit"
+                  variant="secondary"
+                  size="md"
+                  className="w-full"
+                />
               </form>
 
               <p className="text-hero-card-foreground/80 text-sm leading-relaxed">

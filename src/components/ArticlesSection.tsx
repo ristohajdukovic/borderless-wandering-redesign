@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { articles } from "@/data/articles";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { Badge } from "@/components/ui/badge";
+import ArrowButton from "@/components/ui/ArrowButton";
 
 const ArticlesSection = () => {
   const [activeTab, setActiveTab] = useState("All");
@@ -176,12 +177,7 @@ const ArticlesSection = () => {
         <AnimatedSection delay={0.3}>
           <div className="text-center mt-10 md:mt-12">
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                to="/articles"
-                className="inline-block border-2 border-primary text-primary font-semibold px-6 py-3 rounded-[6px] hover:bg-primary hover:text-primary-foreground transition-all duration-200 uppercase tracking-wide text-sm focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-              >
-                View All Articles
-              </Link>
+              <ArrowButton label="View All Articles" to="/articles" variant="primary" size="md" />
             </motion.div>
           </div>
         </AnimatedSection>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Linkedin } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import ArrowButton from "@/components/ui/ArrowButton";
 
 const NewsletterSection = () => {
   const [email, setEmail] = useState("");
@@ -59,14 +60,9 @@ const NewsletterSection = () => {
                 required
               />
               <div className="flex flex-col sm:flex-row items-center gap-3">
-                <motion.button
-                  type="submit"
-                  className="bg-accent text-accent-foreground font-semibold px-8 py-4 rounded-[6px] hover:bg-accent/90 transition-all duration-200 uppercase tracking-wide whitespace-nowrap shadow-lg shadow-primary/25 focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Subscribe
-                </motion.button>
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                  <ArrowButton label="Subscribe" type="submit" variant="secondary" size="md" />
+                </motion.div>
                 <motion.a
                   href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=6957952531863920640"
                   target="_blank"

@@ -1,7 +1,7 @@
 import { Play } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import ArrowButton from "@/components/ui/ArrowButton";
 import { videos } from "@/data/videos";
 
 const VideoSection = () => {
@@ -80,12 +80,7 @@ const VideoSection = () => {
         <AnimatedSection delay={0.3}>
           <div className="text-center mt-10 md:mt-12">
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                to="/videos"
-                className="inline-block border-2 border-primary text-primary font-semibold px-6 py-3 rounded-[6px] hover:bg-primary hover:text-primary-foreground transition-all duration-200 uppercase tracking-wide text-sm"
-              >
-                Watch More Videos
-              </Link>
+              <ArrowButton label="Watch More Videos" to="/videos" variant="primary" size="md" />
             </motion.div>
           </div>
         </AnimatedSection>

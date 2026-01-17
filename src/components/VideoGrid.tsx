@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
-import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { videos } from "@/data/videos";
+import ArrowButton from "@/components/ui/ArrowButton";
 
 const VideoGrid = () => {
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -149,14 +149,13 @@ const VideoGrid = () => {
         <AnimatedSection delay={0.3}>
           <div className="text-center mt-10 md:mt-12">
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                to="https://youtube.com/c/PhilipJames360"
+              <ArrowButton
+                label="Watch more stories"
+                href="https://youtube.com/c/PhilipJames360"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block border-2 border-primary text-primary font-semibold px-6 py-3 rounded-[6px] hover:bg-primary hover:text-primary-foreground transition-all duration-200 uppercase tracking-wide text-sm focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-              >
-                Watch more stories
-              </Link>
+                variant="primary"
+                size="md"
+              />
             </motion.div>
           </div>
         </AnimatedSection>

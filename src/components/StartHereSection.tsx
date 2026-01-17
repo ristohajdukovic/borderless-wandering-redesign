@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import { BookOpen, Layers, Play } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import ArrowButton from "@/components/ui/ArrowButton";
 
 const StartHereSection = () => {
   return (
@@ -36,15 +36,13 @@ const StartHereSection = () => {
                   The most direct entry point: city-by-city coverage with comparisons and lived context.
                 </p>
               </div>
-              <Link
+              <ArrowButton
+                label="Open playlist"
                 to="/videos"
-                className="group mt-8 inline-flex w-fit items-center gap-3 rounded-[6px] bg-white px-7 py-3.5 text-sm font-medium tracking-[0.3px] text-primary transition-all duration-300 ease-[ease] hover:bg-white/90 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
-              >
-                Open playlist
-                <span className="inline-flex transition-transform duration-300 ease-[ease] group-hover:translate-x-[3px]">
-                  -&gt;
-                </span>
-              </Link>
+                variant="secondary"
+                size="md"
+                className="mt-8 w-fit"
+              />
             </div>
           </div>
 
@@ -60,15 +58,13 @@ const StartHereSection = () => {
               <p className="mt-3 text-base text-primary/80">
                 A single page that ranks cities and gets updated over time.
               </p>
-              <Link
+              <ArrowButton
+                label="Read rankings"
                 to="/articles"
-                className="group mt-6 inline-flex items-center gap-2 rounded-[6px] px-7 py-3.5 text-sm font-medium tracking-[0.3px] text-primary transition-all duration-300 ease-[ease] hover:text-primary/80 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-              >
-                Read rankings
-                <span className="inline-flex transition-transform duration-300 ease-[ease] group-hover:translate-x-[3px]">
-                  -&gt;
-                </span>
-              </Link>
+                variant="secondary"
+                size="sm"
+                className="mt-6 w-fit"
+              />
             </div>
 
             <div className="group rounded-[12px] border border-border/60 bg-primary/5 p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-primary/40">
@@ -82,15 +78,13 @@ const StartHereSection = () => {
               <p className="mt-3 text-base text-primary/80">
                 Documentary pace: one city per day across Thailand.
               </p>
-              <Link
+              <ArrowButton
+                label="View series"
                 to="/videos"
-                className="group mt-6 inline-flex items-center gap-2 rounded-[6px] px-7 py-3.5 text-sm font-medium tracking-[0.3px] text-primary transition-all duration-300 ease-[ease] hover:text-primary/80 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-              >
-                View series
-                <span className="inline-flex transition-transform duration-300 ease-[ease] group-hover:translate-x-[3px]">
-                  -&gt;
-                </span>
-              </Link>
+                variant="secondary"
+                size="sm"
+                className="mt-6 w-fit"
+              />
             </div>
           </div>
         </div>

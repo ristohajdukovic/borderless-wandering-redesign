@@ -1,5 +1,6 @@
 import { Article } from "@/data/articles";
 import { Link } from "react-router-dom";
+import ArrowButton from "@/components/ui/ArrowButton";
 
 interface ArticleSidebarProps {
   relatedArticles: Article[];
@@ -22,9 +23,7 @@ const ArticleSidebar = ({ relatedArticles }: ArticleSidebarProps) => {
               aria-label="Email address"
               className="input-dark text-sm"
             />
-            <button type="submit" className="btn-primary w-full text-sm">
-              Subscribe
-            </button>
+            <ArrowButton label="Subscribe" type="submit" variant="secondary" size="sm" className="w-full" />
           </form>
         </div>
 

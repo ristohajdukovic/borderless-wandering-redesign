@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ArrowButton from "@/components/ui/ArrowButton";
 
 const NotFound = () => {
   return (
@@ -14,9 +15,7 @@ const NotFound = () => {
           <p className="text-muted-foreground mb-8">
             The link may be broken or the page may have moved. Let us get you back on track.
           </p>
-          <a href="/" className="btn-primary inline-flex items-center justify-center">
-            Return to Home
-          </a>
+          <ArrowButton label="Return to Home" to="/" variant="primary" size="md" />
         </div>
       </main>
       <Footer />

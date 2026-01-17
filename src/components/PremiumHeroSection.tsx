@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ArrowButton from "@/components/ui/ArrowButton";
 
 const PremiumHeroSection = () => {
   return (
@@ -39,21 +40,15 @@ const PremiumHeroSection = () => {
                   Field notes, comparisons, and city ratings-focused on livability, daily rhythm, and what holds up once
                   the novelty wears off.
                 </p>
-                <motion.a
-                  href="https://youtube.com/c/PhilipJames360"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="group inline-flex items-center justify-between rounded-[6px] bg-white px-7 py-3.5 text-sm font-medium tracking-[0.3px] text-foreground transition-all duration-300 ease-[ease] hover:bg-white/90 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-                >
-                  Watch on Youtube
-                  <span className="ml-4 inline-flex h-8 w-8 items-center justify-center rounded-[6px] bg-primary text-primary-foreground">
-                    <span className="transition-transform duration-300 ease-[ease] group-hover:translate-x-[3px]">
-                      -&gt;
-                    </span>
-                  </span>
-                </motion.a>
+                <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                  <ArrowButton
+                    label="Watch on Youtube"
+                    href="https://youtube.com/c/PhilipJames360"
+                    target="_blank"
+                    variant="secondary"
+                    size="md"
+                  />
+                </motion.div>
               </motion.div>
             </div>
           </div>
