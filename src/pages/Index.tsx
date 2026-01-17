@@ -6,7 +6,6 @@ import ArticlesSection from "@/components/ArticlesSection";
 import VideoGrid from "@/components/VideoGrid";
 import AboutSection from "@/components/AboutSection";
 import NewsletterSection from "@/components/NewsletterSection";
-import AboutMeSection from "@/components/AboutMeSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -21,7 +20,6 @@ const Index = () => {
         <VideoGrid />
         <AboutSection />
         <NewsletterSection />
-        <AboutMeSection />
       </main>
       <Footer />
     </div>
