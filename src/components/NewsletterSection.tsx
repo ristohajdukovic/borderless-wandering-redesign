@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Linkedin } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import ArrowButton from "@/components/ui/ArrowButton";
 
@@ -33,7 +32,7 @@ const NewsletterSection = () => {
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4">
-              Join 100,000+ people immersed into real expat experiences
+              Join more than 100,000 travelers on this journey
             </h2>
           </AnimatedSection>
 
@@ -63,17 +62,6 @@ const NewsletterSection = () => {
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <ArrowButton label="Subscribe" type="submit" variant="secondary" size="md" />
                 </motion.div>
-                <motion.a
-                  href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=6957952531863920640"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Follow on LinkedIn"
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-[6px] border border-primary-foreground/60 text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                  <Linkedin className="h-5 w-5" />
-                </motion.a>
               </div>
             </form>
           </AnimatedSection>

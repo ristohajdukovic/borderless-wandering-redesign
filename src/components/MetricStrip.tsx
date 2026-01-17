@@ -34,7 +34,7 @@ const MetricStrip = () => {
     <section className="py-8 md:py-10 bg-background">
       <div className="container mx-auto px-4">
         <div
-          className="flex flex-col gap-10 lg:flex-row lg:gap-10"
+          className="flex flex-col gap-6 sm:gap-8 lg:flex-row lg:gap-10"
           onMouseLeave={() => setHoverIndex(null)}
         >
           {metrics.map((metric, index) => {
@@ -65,8 +65,8 @@ const MetricStrip = () => {
                   className="absolute inset-0 bg-[linear-gradient(hsl(var(--primary-foreground))/0.08_1px,transparent_1px),linear-gradient(90deg,hsl(var(--primary-foreground))/0.08_1px,transparent_1px)] bg-[size:32px_32px] opacity-60"
                   aria-hidden="true"
                 />
-                <div className="relative flex h-full min-h-[240px] flex-col justify-between p-6 md:p-8 text-left">
-                  <div className="mb-8 md:mb-10">
+                <div className="relative flex h-full min-h-[170px] sm:min-h-[200px] md:min-h-[230px] flex-col justify-between p-4 sm:p-5 md:p-7 text-left">
+                  <div className="pb-4 sm:pb-6">
                     <Icon
                       className={`h-8 w-8 ${
                         isActive ? "text-primary-light/80" : "text-primary"
@@ -74,18 +74,18 @@ const MetricStrip = () => {
                       strokeWidth={2}
                     />
                   </div>
-                  <div className="space-y-4">
+                  <div className="flex flex-col gap-2 sm:gap-3">
                     <div
                       className={`break-words font-heading font-bold leading-none tracking-tight ${
                         isActive
-                          ? "text-primary-light/90 text-[2.65rem] md:text-[3.25rem]"
-                          : "text-primary text-[2rem] md:text-[2.6rem]"
+                          ? "text-primary-light/90 text-[2.1rem] sm:text-[2.4rem] md:text-[3.1rem]"
+                          : "text-primary text-[1.7rem] sm:text-[2rem] md:text-[2.4rem]"
                       }`}
                     >
                       {metric.value}
                     </div>
                     <div
-                      className={`mt-2 text-sm md:text-base ${
+                      className={`text-xs sm:text-sm md:text-base ${
                         isActive ? "text-primary-light/75" : "text-primary/75"
                       }`}
                     >

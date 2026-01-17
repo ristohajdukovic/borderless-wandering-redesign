@@ -138,6 +138,12 @@
     margin-top: clamp(90px, 8vw, 100px);
   }
 
+  @media (max-width: 768px) {
+    section + section {
+      margin-top: clamp(40px, 8vw, 56px);
+    }
+  }
+
   :focus-visible {
     outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;

@@ -3,6 +3,7 @@ import PremiumHeroSection from "@/components/PremiumHeroSection";
 import MetricStrip from "@/components/MetricStrip";
 import StartHereSection from "@/components/StartHereSection";
 import ArticlesSection from "@/components/ArticlesSection";
+import AuthorQuoteSection from "@/components/AuthorQuoteSection";
 import VideoGrid from "@/components/VideoGrid";
 import AboutSection from "@/components/AboutSection";
 import NewsletterSection from "@/components/NewsletterSection";
@@ -17,6 +18,7 @@ const Index = () => {
         <MetricStrip />
         <StartHereSection />
         <ArticlesSection />
+        <AuthorQuoteSection />
         <VideoGrid />
         <AboutSection />
         <NewsletterSection />
